@@ -1,45 +1,117 @@
-body{
-    background: rgba(91, 55, 183, 1);
-    font-family: sans-serif;
+.body {
+    height: 100vh;
+    background: rgb(34, 32, 32);
     display: flex;
+    justify-content: center; 
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    transition:background 0.5s linear;
-    text-align: center;
-    margin: 0;
-    min-height: 100vh;
-}
-.tab-nav-container {
-    background-color: #ffffff;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 30px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
-                0 3px 6px rgba(0, 0, 0, 0.23);
-                display: flex;
-                justify-content: space-between;
-                padding: 30px;
-                width: 450px;
-}
-.tab{
-    background-color: #ffffff;
-    border-radius: 50px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px;
-    margin: 0 10px;
-    transition: background 0.4s linear;
-}
-.tab i{
-    font-size: 1.2em;
-}
-.tab p{
-    font-weight: bold;
     overflow: hidden;
-    max-width: 0;
-    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+     input {
+        margin-top: 10px;
+        border-radius: 5px; 
+        border: 1px solid #ccc;
+        height: 30px;
+    }
+    button {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 5px;
+        }
+        button:hover {
+        cursor: pointer;
+        background: rgb(34, 32, 32);
+        color: white;
+        animation: shake 0.5s ease-in-out;
+        }
+        form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+        .form-group {
+             display: flex;
+             margin: 10px;
+             flex-direction: column;
+            }
+            .card {
+                position: absolute;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                width: 400px;
+                height: 500px;
+                background: white;
+                border-radius: 15px;
+            } 
+            .login {
+                z-index: 2;
+                transform: rotate(-5deg);
+
+            }
+            
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    height: 500px;
+    background: white;
+    border-radius: 15px;
+}
+.signup {
+    z-index: 1;
+    transform: rotate(5deg);
+}
+.switchText {
+    color: blue;
+    text-decoration: underline;
+    font-size: 1rem; cursor: pointer;
+}
+
+@keyframes toRightLogin {
+
+    0% {
+    
+    transform: translateX(0px) rotate(5deg);}
+    
+    100% {
+    
+    transform: translateX(500px) rotate(5deg);
+    
+    }
+}
+    @keyframes toRightSignup {
+    
+    0% {
+        transform: translateX(0px) rotate(-5deg);
+     }
+     100% {
+        transform: translateX(500px) rotate(-5deg);
+    }
+}
+ @keyframes toPosition {
+    
+    0% {
+        transform: translateX(500px) rotate(5deg);
+    }
+     100% {
+        transform: translateX(0px) rotate(5deg);
+    }
+}
+@keyframes toPositionSignup {
+    0% {
+        transform: translateX(500px) rotate(-5deg);
+    }
+    
+    100% {
+        transform: translateX(0px) rotate(-5deg);
+    }
 }
